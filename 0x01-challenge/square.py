@@ -4,11 +4,10 @@
 
 class square():
     """Printing a square"""
-    
+
     width = 0
     height = 0
 
-    
     def __init__(self, *args, **kwargs):
         """instance initializer"""
         for key, value in kwargs.items():
@@ -25,6 +24,7 @@ class square():
     def __str__(self):
         """Returning the str format"""
         return "{}/{}".format(self.width, self.height)
+
 
 if __name__ == "__main__":
 
