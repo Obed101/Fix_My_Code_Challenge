@@ -6,17 +6,13 @@ class User():
     """ Documentation Of the Class"""
 
     def __init__(self, email):
-        """ Init is handling all instanced"""
-        self.__email = email
+        """ this is the init method """
+        if type(email) is not str:
+            raise TypeError("email must be a string")
+        else:
+            self.__email = email
 
     @property
-    def email(self, value):
-        """ this is the email """
-        if type(value) is not str:
-            raise TypeError("email must be a string")
-        self.__email = value
-
-    @email.getter
     def email(self):
         """ this is getter for email """
         return self.__email
@@ -24,5 +20,5 @@ class User():
 
 if __name__ == "__main__":
 
-    u = User("john@snow.com")
+    u = User("me@gmail.com")
     print(u.email)
